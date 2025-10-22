@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Pizza Edition — Clone</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Pizza Edition style launcher — clone (framework only)." />
+</head>
+<body>
+  <div id="splash" class="splash">
+    <div class="splash-card">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><circle cx='48' cy='48' r='44' fill='%23ff6b6b'/><path d='M20 30c8 20 28 20 36 0' fill='%23000000' opacity='0.08'/></svg>" alt="logo" class="logo" />
+      <h1 class="splash-title">The Pizza Edition</h1>
+      <p id="loadingText" class="loading-text">Loading 0/0</p>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-logo" aria-hidden="true">🍕</div>
+      <div class="brand-text">Pizza Edition</div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-btn active" data-filter="all">All</button>
+      <button class="nav-btn" data-filter="games">Games</button>
+      <button class="nav-btn" data-filter="apps">Apps</button>
+      <button class="nav-btn" data-filter="extras">Extras</button>
+    </nav>
+
+    <div class="actions">
+      <button id="copyMainLink" class="action-btn">Make A Link</button>
+      <button id="themeToggle" class="action-btn" title="Toggle theme">Light</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid" id="tileGrid" aria-label="Launcher grid">
+      <!-- Tiles injected by JS -->
+    </section>
+
+    <aside class="sidebar">
+      <h3>Info</h3>
+      <p>Framework only — replace tile links with your own game URLs or embed pages.</p>
+      <p><small>Tip: edit <code>script.js</code> to change tiles.</small></p>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div>Contact • Privacy • Discord</div>
+    <div class="version">Pizza Clone • v1.0</div>
+  </footer>
+
+  <!-- modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button id="modalClose" class="modal-close" title="Close">✖</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
